@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: cypress-io/github-action@v6
         with:
-          start: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
+          start: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY_PMBA }}
           browser: chrome
        
