@@ -23,6 +23,7 @@ async function setupNodeEvents(on, config) {
 
 
 module.exports = defineConfig({
+  projectId: '8kcuuh',
   e2e: {
     baseUrl: "https://learn.cypress.io",  //
     specPattern: "**/*.feature", //spécifier les types de fichier qu'on veut afficher lorsqu'on lance notre cypress

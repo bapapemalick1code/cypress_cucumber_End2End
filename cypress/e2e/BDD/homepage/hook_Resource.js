@@ -10,5 +10,4 @@ beforeEach(()=> {
     cy.visit('/');
     cy.viewport(1440, 900) //pour ajuster la taille de l'ecran depuis cypress
     //cy.get('.osano-cm-denyAll').click() // ignorer la politique de confidentialite
-    cy.contains('Tout rejeter').click()
 })
