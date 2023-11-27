@@ -1,0 +1,17 @@
+{
+  "name": "pvh_cucumber_tuto_fode",
+  "version": "1.0.0",
+  "description": "test cucumber avec la team ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open"
+  },
+  "author": "Pape Malick BA",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^19.1.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.6.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "btnLearning": ".mt-10 > .inline-flex",
+    "pageCours": "#courses",
+    "cours_0": "[data-test=\"course-0\"]",
+    "cours_1": "[data-test=\"course-1\"]",
+    "cours_2": "[data-test=\"course-2\"]",
+    "cours_3": "[data-test=\"course-3\"]"
+}
+  
