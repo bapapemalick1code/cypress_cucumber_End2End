@@ -13,3 +13,15 @@ Then("I should have access to the courses",function() {
         cy.get(this.data[`cours_${i}`]).should('exist');
     }
 })
+
+
+/****Scenario: Acceder aux exemples****/
+When('I click on "See Examples" button', function() {
+    cy.get(this.data.btnExamples).click()
+})
+
+Then("I should have access to the examples page",function() {
+    //on verifie le pathname depuis l'url à travers la commande "checkPathname" qu'on a créé depuis le fichier commands
+   cy.checkPathname(this.data.pageExamples)
+    //
+})

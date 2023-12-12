@@ -1,17 +1,29 @@
 {
-  "name": "pvh_cucumber_tuto_fode",
+  "name": "pvh_cucumber_end2end",
   "version": "1.0.0",
   "description": "test cucumber avec la team ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open"
+    "pretest": "rimraf ./cypress/report",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run merge-reports && npm run generate-htmlreport",
+    "merge-reports": "mochawesome-merge cypress/report/mochawesome-report/*.json > all_test.json",
+    "generate-htmlreport": "marge all_test.json --reportDir cypress/report",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "author": "Pape Malick BA",
   "license": "ISC",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^19.1.1",
+    "@badeball/cypress-cucumber-preprocessor": "^19.2.0",
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "cypress-downloadfile": "^1.2.3",
+    "rimraf": "^5.0.5"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
   }
 }

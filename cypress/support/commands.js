@@ -24,10 +24,18 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import 'cypress-file-upload' 
+require('cypress-downloadfile/lib/downloadFileCommand')
+
 //créer une commande spéciale qui sera réutilisable pour checker le path
 Cypress.Commands.add('redirection', (sectionName) => {
     cy.location().should((my_location) => {
         expect(my_location.hash).to.eq(sectionName)   
     })
+})
 
+Cypress.Commands.add('checkPathname', (sectionName) => {
+    cy.location().should((my_location) => {
+        expect(my_location.pathname).to.eq(sectionName)   
+    })
 })
