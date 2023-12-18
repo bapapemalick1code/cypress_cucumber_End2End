@@ -25,8 +25,8 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents,
     baseUrl: "https://learn.cypress.io",  //
-    specPattern: "**/*.feature", //spécifier les types de fichier qu'on veut afficher lorsqu'on lance notre cypress
-    //specPattern: "**/*.js", //spécifier les types de fichier qu'on veut afficher lorsqu'on lance notre cypress
+    //specPattern: "**/*.feature", //spécifier les types de fichier qu'on veut afficher lorsqu'on lance notre cypress
+    specPattern: "**/*.js", //spécifier les types de fichier qu'on veut afficher lorsqu'on lance notre cypress
     //config pour les reports
     reporter: "mochawesome",
     reporterOptions: {
