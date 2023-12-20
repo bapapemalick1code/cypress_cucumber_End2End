@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-19T09:58:02.671Z",
+    "end": "2023-12-19T09:58:03.047Z",
+    "duration": 376,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "349f36f7-b635-4442-9b93-c4574b32cf6d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\APITesting\\PostCalls.cy.js",
+      "file": "cypress\\e2e\\APITesting\\PostCalls.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df77f392-154e-4ce4-b2c9-ae6a2a45982a",
+          "title": "Api Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Approch_3 - Using fixture",
+              "fullTitle": "Api Testing Approch_3 - Using fixture",
+              "timedOut": null,
+              "duration": 351,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Utiliser les fixture file\ncy.fixture('data_api').then(function (my_fixture) {\n  var requestBody = my_fixture;\n  cy.request({\n    method: 'POST',\n    url: 'https://jsonplaceholder.typicode.com/posts/',\n    body: requestBody\n  }).then(function (response) {\n    expect(response.status).to.eq(201);\n    expect(response.body.tourist_name).to.eq(requestBody.tourist_name);\n    expect(response.body.tourist_email).to.eq(requestBody.tourist_email);\n    expect(response.body.tourist_location).to.eq(requestBody.tourist_location);\n    //d'autres assertions supp\n    expect(response.body).has.property('tourist_name', requestBody.tourist_name);\n    expect(response.body).has.property('tourist_email', requestBody.tourist_email);\n  });\n});",
+              "err": {},
+              "uuid": "fa25a4f9-f504-4241-8d54-b73a22237ffd",
+              "parentUUID": "df77f392-154e-4ce4-b2c9-ae6a2a45982a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa25a4f9-f504-4241-8d54-b73a22237ffd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 351,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
