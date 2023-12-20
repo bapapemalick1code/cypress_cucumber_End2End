@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-20T09:39:41.309Z",
+    "end": "2023-12-20T09:39:41.730Z",
+    "duration": 421,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "76c2fd18-6b14-4ddd-8c7d-54bfcefbac9e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\APITesting\\ParsingJSONResponse.cy.js",
+      "file": "cypress\\e2e\\APITesting\\ParsingJSONResponse.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24b89499-bafb-4ad1-a21d-e57587c2836d",
+          "title": "Parsing JSON Response",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Parsing simple JSON Response",
+              "fullTitle": "Parsing JSON Response Parsing simple JSON Response",
+              "timedOut": null,
+              "duration": 388,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://fakestoreapi.com/products'\n}).then(function (response) {\n  expect(response.status).to.eq(200);\n  expect(response.body[0].id).to.eq(1);\n  expect(response.body[0].title).to.eq(\"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops\");\n  expect(response.body[0].price).to.eq(109.95);\n});",
+              "err": {},
+              "uuid": "d3dd1874-a2ea-4d5e-a722-5a0061ce6e2f",
+              "parentUUID": "24b89499-bafb-4ad1-a21d-e57587c2836d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d3dd1874-a2ea-4d5e-a722-5a0061ce6e2f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 388,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
