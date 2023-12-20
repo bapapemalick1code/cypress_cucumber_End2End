@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-12-19T09:57:19.184Z",
+    "end": "2023-12-19T09:57:19.474Z",
+    "duration": 290,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fb2dcf8c-34b4-4536-ac75-f7405b4e75ba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\APITesting\\PostCalls.cy.js",
+      "file": "cypress\\e2e\\APITesting\\PostCalls.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "55ddfa67-a0b0-42cf-847d-47f3946201d3",
+          "title": "Api Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Approch_3 - Using fixture",
+              "fullTitle": "Api Testing Approch_3 - Using fixture",
+              "timedOut": null,
+              "duration": 239,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Utiliser les fixture file\nvar requestBody = '';\ncy.fixture('data_api').then(function (my_fixture) {\n  my_fixture, (0, _readOnlyError2[\"default\"])(\"requestBody\");\n});\ncy.request({\n  method: 'POST',\n  url: 'https://jsonplaceholder.typicode.com/posts/',\n  body: requestBody\n}).then(function (response) {\n  expect(response.status).to.eq(201);\n  expect(response.body.tourist_name).to.eq(requestBody.tourist_name);\n  expect(response.body.tourist_email).to.eq(requestBody.tourist_email);\n  expect(response.body.tourist_location).to.eq(requestBody.tourist_location);\n  //d'autres assertions supp\n  expect(response.body).has.property('tourist_name', requestBody.tourist_name);\n  expect(response.body).has.property('tourist_email', requestBody.tourist_email);\n});",
+              "err": {
+                "message": "TypeError: \"requestBody\" is read-only",
+                "estack": "TypeError: \"requestBody\" is read-only\n    at _readOnlyError (node_modules/@babel/runtime/helpers/readOnlyError.js:2:0)\n    at Context.eval (cypress/e2e/APITesting/PostCalls.cy.js:55:37)",
+                "diff": null
+              },
+              "uuid": "38a6c6fa-2494-46ce-bbaf-3133b6963c35",
+              "parentUUID": "55ddfa67-a0b0-42cf-847d-47f3946201d3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "38a6c6fa-2494-46ce-bbaf-3133b6963c35"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 239,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
