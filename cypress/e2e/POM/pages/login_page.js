@@ -30,5 +30,6 @@ export class LoginPage{
     verifErrorMsg(){
         cy.get('.oxd-alert-content > .oxd-text').should('be.visible').should('have.text','Invalid credentials')
     }
+    //
 
 }
