@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-13T12:29:46.460Z",
+    "end": "2024-06-13T12:29:58.294Z",
+    "duration": 11834,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6ec69864-7c2c-43d7-8e21-3eb41e41e414",
+      "title": "",
+      "fullFile": "cypress\\e2e\\POM\\loginDemo.cy.js",
+      "file": "cypress\\e2e\\POM\\loginDemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b06f336d-b1cd-4b47-aee3-8eaac57b3977",
+          "title": "login test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "login test suite login",
+              "timedOut": null,
+              "duration": 7302,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.test_data.login);\nloginPage.enterPassword(this.test_data.password);\nloginPage.clickLogin();\nloginPage.verifDashboard();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<a.oxd-main-menu-item.active>' to have text 'Dashboard', but the text was '儀表板'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<a.oxd-main-menu-item.active>' to have text 'Dashboard', but the text was '儀表板'\n    at LoginPage.verifDashboard (cypress/e2e/POM/pages/login_page.js:20:55)\n    at Context.eval (cypress/e2e/POM/loginDemo.cy.js:21:18)",
+                "diff": "- '儀表板'\n+ 'Dashboard'\n"
+              },
+              "uuid": "10571ca3-3af4-4c75-a0f1-f3558864948e",
+              "parentUUID": "b06f336d-b1cd-4b47-aee3-8eaac57b3977",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with invalid credentials",
+              "fullTitle": "login test suite login with invalid credentials",
+              "timedOut": null,
+              "duration": 2233,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('Admin');\nloginPage.enterPassword('admin567');\nloginPage.clickLogin();\nloginPage.verifAlert();\nloginPage.verifErrorMsg();",
+              "err": {},
+              "uuid": "4bbab112-5126-43a0-958e-6c1a6cd9d368",
+              "parentUUID": "b06f336d-b1cd-4b47-aee3-8eaac57b3977",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4bbab112-5126-43a0-958e-6c1a6cd9d368"
+          ],
+          "failures": [
+            "10571ca3-3af4-4c75-a0f1-f3558864948e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9535,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

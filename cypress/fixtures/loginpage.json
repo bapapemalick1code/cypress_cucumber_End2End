@@ -3,6 +3,8 @@
     "password_textbox": ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input",
     "login_btn": ".oxd-button",
     "dashbord_loc": ":nth-child(8) > .oxd-main-menu-item",
+    "alert_login": ".oxd-alert",
+    "alert_login_text": ".oxd-alert-content > .oxd-text",
     "login": "Admin",
     "password": "admin123"
 }
